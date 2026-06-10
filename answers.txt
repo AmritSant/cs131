@@ -1,4 +1,3 @@
-cat << 'EOF' > answers.txt
 T1: cd ~/cs131/ws1 && pwd
 T2: ls ../data
 T3: file logs/app01.log .env
@@ -13,4 +12,3 @@ T11: mv data/readme.txt data/README.md
 T12: rm -ri backup/data
 T13: git init && git add answers.txt && git commit -m "linux basics challenge"
 T14: git clone https://github.com/AmritSant/cs131.git
-EOF
