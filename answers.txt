@@ -1,14 +1,16 @@
+cat << 'EOF' > answers.txt
 T1: cd ~/cs131/ws1 && pwd
-T2: ls data
+T2: ls ../data
 T3: file logs/app01.log .env
 T4: ls -alhr
 T5: ls -lS logs/
 T6: Size: 1048576, Owner: home, Time: Jun 10 09:28
 T7: ls data/Data?.csv
-T8: ls data/[A-Z]*
+T8: ls [A-Z]*
 T9: ls logs/BACKUP.[0-9][0-9][0-9]
 T10: cp -r data backup/
 T11: mv data/readme.txt data/README.md
 T12: rm -ri backup/data
 T13: git init && git add answers.txt && git commit -m "linux basics challenge"
 T14: git clone https://github.com/AmritSant/cs131.git
+EOF
