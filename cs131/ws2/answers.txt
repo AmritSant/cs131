@@ -1,7 +1,7 @@
 git add notes.md
 git commit -m "ws2: add task line"
 Q2. git log --oneline
-Q3. <insert_your_short_hash_here>
+Q3. 6222e90
 Q4. git revert HEAD --no-edit
 Q5. git rm --cached bigdata.bin; echo "bigdata.bin" >> .gitignore; git add .gitignore; git commit --amend --no-edit; git push
 Q6. git checkout -b feature-summary
