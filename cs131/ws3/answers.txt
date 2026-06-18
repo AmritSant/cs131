@@ -1,0 +1,25 @@
+A1: ls -l > listing.txt && date >> listing.txt
+A2: ls /nonexistent_dir 2> errors.txt (File descriptor for stderr is 2)
+A3: ls /nonexistent_dir /etc > output.txt 2> errors.txt
+A4: ls /nonexistent_dir /etc &> combined.txt
+A5: Only successful contents of /etc show up because /dev/null discards all error data written to it.
+A6: sort fruits.txt | uniq
+A7: sort fruits.txt | uniq -c | sort -nr
+A8: grep -c "ERROR" server.log
+A9: grep "ERROR" server.log > errors_only.txt
+A10: grep -oE '^[A-Z]+' server.log | sort | uniq -c | sort -nr
+A11: grep -oE '"state":"[A-Z]{2}"' /data/yelp/yelp_academic_dataset_business.json | sort | uniq -c | sort -nr | head -n 5
+B1: Command: id | uid=XXXX, gid=XXXX, groups=XXXX. uid identifies the individual user account, while gid identifies the user's primary security group.
+B2: Command: ls -l fruits.txt | String: -rw-r--r--. Owner has read/write; Group has read-only; Other has read-only.
+B3: Command: umask | Default permissions produced: -rw-r--r-- (derived from umask 0022).
+B4: Commands: chmod 000 secret.txt && chmod u+rw secret.txt | Error: cat: secret.txt: Permission denied
+B5: Command: chmod 640 fruits.txt | Octal value: 640
+B6: Command: find . -type f -user $USER -perm -u+w
+C1: Commands: bash long.sh > log.txt & && tail log.txt | PID:95919 
+C2: Command: jobs | The three pieces of information shown are the job number, the current status, and the exact command string
+C3: Commands: fg %1 && [Ctrl+Z] && jobs | The state now shows as 'Stopped'.
+C4: Commands: bg %1 && jobs | The state returns to 'Running' in the background.
+C5: Commands: kill %1 && jobs | By default, the kill command sends the SIGTERM (Signal 15) termination signal.
+C6: Commands: bash long.sh > log.txt & && disown %1 && ps -p 95919
+C7: The disown command removes the job from the shell's active jobs table, which prevents the shell from sending a hangup signal (SIGHUP) to the process when the terminal closing terminates the session.
+
