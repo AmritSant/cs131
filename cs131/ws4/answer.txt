@@ -1,0 +1,10 @@
+https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L239
+sedit()
+// Implementation & explanation:
+// This function checks the system environment using 'type -t' to see what text editors are installed. It sequentially tests for 'jpico', 'nano', and 'pico'. If it finds any of them as a valid file, it launches that editor with superuser privileges via 'sudo' and passes all command-line arguments ("$@"). If none are found, it defaults to running 'sudo vim'.
+
+https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L300
+mkdirg()
+// Implementation & explanation:
+// This function takes a single argument ($1) representing a directory path. It first runs 'mkdir -p $1' to create the directory (the '-p' flag safely creates any missing parent directories and avoids errors if it already exists). If successful, it immediately runs 'cd $1' to move the user directly into that newly created directory.
+
