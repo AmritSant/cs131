@@ -8,3 +8,14 @@ mkdirg()
 // Implementation & explanation:
 // This function takes a single argument ($1) representing a directory path. It first runs 'mkdir -p $1' to create the directory (the '-p' flag safely creates any missing parent directories and avoids errors if it already exists). If successful, it immediately runs 'cd $1' to move the user directly into that newly created directory.
 
+https://github.com/AmritSant/cs131/blob/baa8462b1909c32ef3edd51f1efc04e87ad8c18a/cs131/ws4/.bashrc#L4
+This is an alias for 'git status' which allows for a faster, two-character lookup of tracking and branch changes in git-managed workspaces.
+
+https://github.com/AmritSant/cs131/blob/baa8462b1909c32ef3edd51f1efc04e87ad8c18a/cs131/ws4/.bashrc#L7
+if [ -x /usr/bin/nano ]; then ...
+An evaluation check that uses file test rules (-x) to confirm if the text editor nano is executable. If so, it configures nano as the environmental system editor variable; otherwise, it handles safe fallback logic directly back to vi.
+
+https://github.com/AmritSant/cs131/blob/baa8462b1909c32ef3edd51f1efc04e87ad8c18a/cs131/ws4/.bashrc#L14
+A custom automated routine ensuring standard item safeguards. It consumes file pointers, validates item integrity using standard binary conditional flags (-f), targets matching names, and performs standard backup copies dynamically appending high-resolution timestamps.
+
+
