@@ -1,0 +1,41 @@
+Interpretation: For every additional dollar in total bill, the predicted tip increases based on the model total_bill coefficient, holding party size constant.
+Batch [6070f292954e4c66acfdfb1fd686543c] submitted.
+WARNING: No runtime version specified. Using the default runtime version. It is recommended to select a specific major.minor runtime version in production, as the default runtime version may change at any time.
+Using the default container image
+Waiting for container log creation
+PYSPARK_PYTHON=/opt/dataproc/conda/bin/python
+Generating /home/spark/.pip/pip.conf
+Configuring index-url as 'https://us-python.pkg.dev/artifact-registry-python-cache/virtual-python/simple/'
+JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
+SPARK_EXTRA_CLASSPATH=
+:: loading settings :: file = /etc/spark/conf/ivysettings.xml
+26/07/26 04:58:55 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-google-hadoop-file-system.properties,hadoop-metrics2.properties
+26/07/26 04:58:55 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+26/07/26 04:58:55 INFO MetricsSystemImpl: google-hadoop-file-system metrics system started
++----------+----+------+------+---+------+----+
+|total_bill| tip|   sex|smoker|day|  time|size|
++----------+----+------+------+---+------+----+
+|     16.99|1.01|Female|    No|Sun|Dinner|   2|
+|     10.34|1.66|  Male|    No|Sun|Dinner|   3|
+|     21.01| 3.5|  Male|    No|Sun|Dinner|   3|
++----------+----+------+------+---+------+----+
+
+Total rows: 3
+Batch [6070f292954e4c66acfdfb1fd686543c] finished.
+metadata:
+  '@type': type.googleapis.com/google.cloud.dataproc.v1.BatchOperationMetadata
+  batch: projects/xenon-momentum-503604-b6/locations/us-central1/batches/6070f292954e4c66acfdfb1fd686543c
+  batchUuid: a631eb8b-0e51-4974-8192-4f9f05646e17
+  createTime: '2026-07-26T04:57:41.300206Z'
+  description: Batch
+  labels:
+    goog-dataproc-batch-id: 6070f292954e4c66acfdfb1fd686543c
+    goog-dataproc-batch-uuid: a631eb8b-0e51-4974-8192-4f9f05646e17
+    goog-dataproc-drz-resource-uuid: batch-a631eb8b-0e51-4974-8192-4f9f05646e17
+    goog-dataproc-location: us-central1
+  operationType: BATCH
+  warnings:
+  - No runtime version specified. Using the default runtime version. It is recommended
+    to select a specific major.minor runtime version in production, as the default
+    runtime version may change at any time.
+name: projects/xenon-momentum-503604-b6/regions/us-central1/operations/de1cfbf2-7ad0-3116-a607-cb28bcd369ea
