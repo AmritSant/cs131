@@ -1,0 +1,44 @@
+=== FILE SIZE (du -h) ===
+3.0G	data/may_of_each_year_sample_2019_to_2026.csv
+du -h data/may_of_each_year_sample_2019_to_2026.csv  0.00s user 0.00s system 48% cpu 0.005 total
+
+=== TOTAL ROWS (wc -l) ===
+ 29962428 data/may_of_each_year_sample_2019_to_2026.csv
+wc -l data/may_of_each_year_sample_2019_to_2026.csv  2.66s user 0.26s system 99% cpu 2.938 total
+
+=== HEADER & SCHEMA (head) ===
+VendorID,tpep_pickup_datetime,tpep_dropoff_datetime,passenger_count,trip_distance,RatecodeID,store_and_fwd_flag,PULocationID,DOLocationID,payment_type,fare_amount,extra,mta_tax,tip_amount,tolls_amount,improvement_surcharge,total_amount,congestion_surcharge,airport_fee,Airport_fee,cbd_congestion_fee
+1,2019-05-01 00:14:50,2019-05-01 00:16:48,1.0,0.0,1.0,N,145,145,2,3.0,0.5,0.5,0.0,0.0,0.3,4.3,0.0,,,
+1,2019-05-01 00:35:54,2019-05-01 00:37:27,1.0,1.5,1.0,N,145,145,2,3.0,0.5,0.5,0.0,0.0,0.3,4.3,0.0,,,
+1,2019-05-01 00:37:45,2019-05-01 00:37:49,1.0,1.5,1.0,N,145,145,2,2.5,0.5,0.5,0.0,0.0,0.3,3.8,0.0,,,
+1,2019-05-01 00:44:57,2019-05-01 00:50:11,1.0,0.7,1.0,N,161,161,2,5.0,3.0,0.5,0.0,0.0,0.3,8.8,2.5,,,
+head -n 5 data/may_of_each_year_sample_2019_to_2026.csv  0.00s user 0.00s system 61% cpu 0.003 total
+
+=== TAIL SAMPLE (tail & cut) ===
+2,2026-05-31 23:35:12,2026-05-31 23:51:04,5.11,0,0.0,18.69
+1,2026-05-31 23:48:01,2026-06-01 00:05:57,8.8,0,0.0,33.48
+2,2026-05-31 23:48:50,2026-06-01 00:03:52,6.47,0,0.0,28.87
+2,2026-05-31 23:23:13,2026-05-31 23:38:35,2.94,0,0.0,22.95
+2,2026-05-31 23:41:51,2026-05-31 23:47:32,0.83,0,0.0,8.52
+tail -n 5 data/may_of_each_year_sample_2019_to_2026.csv  0.00s user 0.00s system 59% cpu 0.003 total
+cut -d',' -f1,2,3,5,10,14,17  0.00s user 0.00s system 62% cpu 0.003 total
+
+=== TOP CATEGORIES (cut, sort, uniq) ===
+21234817 1
+5282494 2
+3006500 0
+277400 4
+161216 3
+cut -d',' -f10 data/may_of_each_year_sample_2019_to_2026.csv  21.37s user 0.49s system 99% cpu 21.939 total
+tail -n +2  1.74s user 0.03s system 8% cpu 21.938 total
+sort  7.02s user 0.14s system 26% cpu 27.179 total
+uniq -c  1.44s user 0.02s system 5% cpu 27.179 total
+sort -nr  0.00s user 0.00s system 0% cpu 27.178 total
+
+=== NUMERIC AGGREGATE (awk) ===
+Trips: 21234817 | Avg Fare: $17.17 | Avg Tip: $3.83
+awk -F','  data/may_of_each_year_sample_2019_to_2026.csv  69.78s user 0.66s system 99% cpu 1:10.64 total
+
+=== FILTERING COUNT (grep -c) ===
+1
+grep -c ",1.25$" data/may_of_each_year_sample_2019_to_2026.csv  29.65s user 0.28s system 99% cpu 29.989 total
